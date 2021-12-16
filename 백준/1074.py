@@ -14,10 +14,16 @@ def solution(x, y, number):
                 print(number)
                 return
             number += 1
-        if y+2 < n:
-            y = 2+y
-        elif x+2 < n:
-            x, y = 2+x, 0
+        if number%16 == 0:
+            if y+4 < n:
+                x, y = x-4, y+4
+            elif x+2 < n:
+                x, y = x+2, 0
+        else:
+            if y+2 < n:
+                y = 2+y
+            elif x+2 < n:
+                x, y = 2+x, 0
 
     return
 
